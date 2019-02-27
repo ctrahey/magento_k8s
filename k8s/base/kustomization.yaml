@@ -1,0 +1,6 @@
+resources:
+-  db_pvc.yaml
+-  db_svc.yaml
+-  m2_svc.yaml
+-  db_deployment.yaml
+-  m2_deployment.yaml

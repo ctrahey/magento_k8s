@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magento
+  labels:
+    app: magento
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: magento
+  template:
+    metadata:
+      labels:
+        app: magento
+    spec:
+      containers:
+      - name: magentoweb
+        image: php:7.1-apache
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: source
+          mountPath: /var/www/html/
+      volumes:
+      - name: source
+        hostPath:
+          path: ../magento
+          type: Directory

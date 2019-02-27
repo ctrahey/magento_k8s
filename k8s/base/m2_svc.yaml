@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: magento
+spec:
+  selector:
+    app: magento
+  ports:
+  - protocol: TCP
+    port: 80

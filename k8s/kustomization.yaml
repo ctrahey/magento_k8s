@@ -1,0 +1,5 @@
+namespace: magento
+bases:
+- ./base
+resources:
+- namespace.yaml
