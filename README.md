@@ -7,7 +7,11 @@
 1. Install an [Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/#docker-for-mac)
 
 ### Installation
+1. Modify `localvolume.yaml` to point to your local copy of Magento source code
 1. Build the docker image and tag it "magento": `docker build -t magento -f magento.Dockerfile .`
-1. `kustomize build | kuectl apply -f -`
+1. `kustomize build | kubectl apply -f -`
 1. edit your hosts file, add `local.magento` pointing at `127.0.0.1`
+
+
+#### Performance Trick
 1. run a dummy image & mount your magento source [c.f.](https://github.com/docker/for-mac/issues/2549#issuecomment-442265169) `docker run -ti -v $(pwd)/magento:/tmp/magento:delegated busybox`
