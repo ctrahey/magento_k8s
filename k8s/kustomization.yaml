@@ -3,3 +3,5 @@ bases:
 - ./base
 resources:
 - namespace.yaml
+patchesStrategicMerge:
+- localvolume.yaml

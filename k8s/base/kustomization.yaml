@@ -4,3 +4,4 @@ resources:
 -  m2_svc.yaml
 -  db_deployment.yaml
 -  m2_deployment.yaml
+-  ingress.yaml

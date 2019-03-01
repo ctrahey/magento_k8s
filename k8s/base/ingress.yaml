@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: magento
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: local.magento
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: magento
+          servicePort: 80

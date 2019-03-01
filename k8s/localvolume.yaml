@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magento
+spec:
+  template:
+    spec:
+      volumes:
+      - name: source
+        hostPath:
+          path: /Users/christrahey/Development/m2k/magento
