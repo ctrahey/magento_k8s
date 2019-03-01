@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: magentoweb
-        image: discogs/magento
+        image: magento
         ports:
         - containerPort: 80
         volumeMounts:
